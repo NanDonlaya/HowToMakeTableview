@@ -57,14 +57,6 @@ class TabbarAndCollectionviewViewController: UIViewController, UICollectionViewD
 
 extension TabbarAndCollectionviewViewController: UICollectionViewDelegateFlowLayout {
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let width = CGFloat(screen.width) / 2 - 2
-//
-//        print("NAN***\(UICollectionViewFlowLayout.automaticSize)")
-//        return CGSize(width: width, height: 389)
-//    }
-    
     func setGridView() {
         
         let flow = collectionviewConnectView.collectionViewLayout as! UICollectionViewFlowLayout

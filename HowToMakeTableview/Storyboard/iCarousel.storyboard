@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dG4-Le-j91">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photoi Carousel View Controller-->
+        <!--Flow Layout Carousel View Controller-->
         <scene sceneID="8Lc-9z-vic">
             <objects>
-                <viewController id="TvP-ho-OJv" customClass="PhotoiCarouselViewController" customModule="HowToMakeTableview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TvP-ho-OJv" customClass="FlowLayoutCarouselViewController" customModule="HowToMakeTableview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pd2-57-7We">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,8 +37,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="TvP-ho-OJv" id="WSe-jo-7cs"/>
-                                    <outlet property="delegate" destination="TvP-ho-OJv" id="XKW-1D-Uiu"/>
+                                    <outlet property="dataSource" destination="TvP-ho-OJv" id="EHg-f5-oz5"/>
+                                    <outlet property="delegate" destination="TvP-ho-OJv" id="7ds-OE-57t"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -52,12 +52,96 @@
                         <viewLayoutGuide key="safeArea" id="aFJ-hm-01k"/>
                     </view>
                     <connections>
-                        <outlet property="collectionviewConnectView" destination="rYG-3J-kIe" id="LqL-Jb-sOd"/>
+                        <outlet property="collectionviewConnectView" destination="rYG-3J-kIe" id="3eq-6J-77l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gO0-Ii-OtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="26"/>
+            <point key="canvasLocation" x="-182" y="-499"/>
+        </scene>
+        <!--Photoi Carousel View Controller-->
+        <scene sceneID="zxU-9b-jqY">
+            <objects>
+                <viewController id="dG4-Le-j91" customClass="PhotoiCarouselViewController" customModule="HowToMakeTableview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TST-i2-AYy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-fM-lJJ">
+                                <rect key="frame" x="8" y="52" width="359" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CSq-t8-FJQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bHU-EI-YLL">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="dG4-Le-j91" id="y3A-Nh-cKe"/>
+                                    <outlet property="delegate" destination="dG4-Le-j91" id="v3N-sb-X9e"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Hb-fM-lJJ" firstAttribute="leading" secondItem="X73-od-eeZ" secondAttribute="leading" constant="8" id="5eq-XT-qQd"/>
+                            <constraint firstItem="5Hb-fM-lJJ" firstAttribute="top" secondItem="X73-od-eeZ" secondAttribute="top" constant="32" id="ITa-8q-mPr"/>
+                            <constraint firstItem="X73-od-eeZ" firstAttribute="bottom" secondItem="5Hb-fM-lJJ" secondAttribute="bottom" constant="32" id="IWi-pR-dNS"/>
+                            <constraint firstItem="X73-od-eeZ" firstAttribute="trailing" secondItem="5Hb-fM-lJJ" secondAttribute="trailing" constant="8" id="fiI-Gm-6vN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X73-od-eeZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionviewConnectView" destination="5Hb-fM-lJJ" id="BZE-lp-Vbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80O-nc-XAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="-500"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="3kw-zd-yrp">
+            <objects>
+                <viewController id="L5E-93-npn" customClass="IcarouselViewController" customModule="HowToMakeTableview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vQJ-gx-LN3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5Q-Lx-5T5" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.99314453130000002" green="0.57265624999999998" blue="0.67613281250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="L5E-93-npn" id="MZM-Ok-62Q"/>
+                                    <outlet property="delegate" destination="L5E-93-npn" id="udX-sN-Lj0"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j9d-2h-wpK" firstAttribute="bottom" secondItem="K5Q-Lx-5T5" secondAttribute="bottom" id="6L8-H3-KWg"/>
+                            <constraint firstItem="j9d-2h-wpK" firstAttribute="trailing" secondItem="K5Q-Lx-5T5" secondAttribute="trailing" id="Ir9-x3-ZUJ"/>
+                            <constraint firstItem="K5Q-Lx-5T5" firstAttribute="top" secondItem="j9d-2h-wpK" secondAttribute="top" id="jAb-2b-EcK"/>
+                            <constraint firstItem="K5Q-Lx-5T5" firstAttribute="leading" secondItem="j9d-2h-wpK" secondAttribute="leading" id="rxM-aL-Svf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j9d-2h-wpK"/>
+                    </view>
+                    <connections>
+                        <outlet property="icarouselConnectView" destination="K5Q-Lx-5T5" id="4Fd-JQ-Ec3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mp2-Qa-aCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="-501"/>
         </scene>
     </scenes>
 </document>

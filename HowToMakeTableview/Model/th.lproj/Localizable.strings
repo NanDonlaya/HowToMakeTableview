@@ -5,4 +5,9 @@
   Created by Donlaya on 12/10/2561 BE.
   Copyright © 2561 Donlaya. All rights reserved.
 */
-"breeds" = "สายพันธุ์";
+"breeds_home" = "สายพันธุ์ของสุนัข";
+"house_home" = "บ้านและที่นอนสุนัข";
+"food_home" = "อาหารเจ้าตูบ";
+"sport_home" = "กีฬาและการออกกำลัง";
+"traing_home" = "ฝึกสอนสุนัข";
+"charity_home" = "การกุศลน้องหมา";

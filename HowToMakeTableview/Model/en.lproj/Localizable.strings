@@ -7,11 +7,11 @@
 */
 
 //HomeTableview
-"breeds_home" = "Breeds";
-"breeds_home" = "Breeds";
-"breeds_home" = "Breeds";
-"breeds_home" = "Breeds";
-"breeds_home" = "Breeds";
-"breeds_home" = "Breeds";
+"breeds_home" = "BREEDS";
+"house_home" = "HOUSE";
+"food_home" = "FOOD";
+"sport_home" = "SPORT";
+"traing_home" = "TRAING";
+"charity_home" = "CHARITY";
 
 

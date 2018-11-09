@@ -1,21 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TabBarCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TabBarCollectionViewCell" id="gTV-IL-0wX" customClass="TabBarCollectionViewCell" customModule="HowToMakeTableview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IP3-Un-wmH">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="Fx1-mF-RiJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-UF-efs">
+                        <rect key="frame" x="16" y="260" width="168" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="168" id="21s-kd-5Ml"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="EqL-UF-efs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="28K-hM-LYt"/>
+                <constraint firstItem="IP3-Un-wmH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JRQ-DG-ciq"/>
+                <constraint firstAttribute="trailing" secondItem="EqL-UF-efs" secondAttribute="trailing" constant="16" id="RQ2-eL-nJN"/>
+                <constraint firstItem="IP3-Un-wmH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ayb-6F-BmG"/>
+                <constraint firstAttribute="bottom" secondItem="EqL-UF-efs" secondAttribute="bottom" constant="10" id="jX1-ur-kjq"/>
+                <constraint firstItem="EqL-UF-efs" firstAttribute="top" secondItem="IP3-Un-wmH" secondAttribute="bottom" constant="10" id="kFz-JQ-csf"/>
+                <constraint firstAttribute="trailing" secondItem="IP3-Un-wmH" secondAttribute="trailing" id="twC-Eo-e00"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="200" height="300"/>
+            <connections>
+                <outlet property="image" destination="IP3-Un-wmH" id="KYY-Je-Fku"/>
+                <outlet property="price" destination="EqL-UF-efs" id="sd0-5V-aCX"/>
+            </connections>
+            <point key="canvasLocation" x="89.599999999999994" y="98.050974512743636"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import iCarousel
 
 class PhotoiCarouselCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var showImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Localize_Swift
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Localize.setCurrentLanguage("th")
+        
+        GMSServices.provideAPIKey("AIzaSyD23y-GF_h7UyMGnPKaAbcqoX5SWRI8X2w")
+        
         return true
     }
 

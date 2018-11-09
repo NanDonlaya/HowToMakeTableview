@@ -8,23 +8,59 @@
 
 import UIKit
 
-class ProtocolDelegateHeightViewController: UIViewController {
-
+class ProtocolDelegateHeightViewController: UIViewController, DelegateHeight {
+    
+    func updateHeight() {
+        
+        tableviewConectView.beginUpdates() //จะไปทำ Method tableview height for row เพื่อเปลี่ยนแปลงความสูงของแต่ละ cell
+        tableviewConectView.endUpdates()
+    }
+    
+    @IBOutlet weak var tableviewConectView: UITableView!
+    
+    var allData = Data()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableviewConectView.rowHeight = UITableView.automaticDimension
+        tableviewConectView.estimatedRowHeight = 100
 
-        // Do any additional setup after loading the view.
+        tableviewConectView.register(UINib(nibName: "ProtocolDelegateHeightCell", bundle: Bundle.main), forCellReuseIdentifier: "ProtocolDelegateHeightCell")
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ProtocolDelegateHeightViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return allData.foodName.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProtocolDelegateHeightCell", for: indexPath) as! ProtocolDelegateHeightCell
+        
+        cell.selectionStyle = .none
+        
+        cell.showImage.image = UIImage(named: allData.foodImage[indexPath.row])
+        
+        cell.showLabel.text = allData.foodName[indexPath.row]
+        cell.showLabel.numberOfLines = 0
+        cell.showLabel.lineBreakMode = .byWordWrapping
+        cell.showLabel.sizeToFit()
+        cell.constrainHeightLabel.constant = cell.showLabel.frame.height
+        
+        cell.showButton.setTitle("Show Description", for: .normal)
+        
+        cell.showDescription.text = allData.foodDescription[indexPath.row]
+        
+        cell.delegateSetupHeight = self  //อย่าลืมเซ็ท Delegate Protocol ด้วย
+        
+        return cell
+    }
+    
+   
 }

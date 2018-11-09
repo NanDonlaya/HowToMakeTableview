@@ -1,5 +1,5 @@
 //
-//  PhotoiCarouselCollectionViewCell.swift
+//  FlowLayoutCarouselCollectionViewCell.swift
 //  HowToMakeTableview
 //
 //  Created by Donlaya on 10/10/2561 BE.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoiCarouselCollectionViewCell: UICollectionViewCell {
+class FlowLayoutCarouselCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var showView: UIView!
     @IBOutlet weak var showImage: UIImageView!

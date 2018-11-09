@@ -10,21 +10,50 @@ import UIKit
 
 class SectionUITableviewViewController: UIViewController {
 
+    @IBOutlet weak var tableviewConnectView: UITableView!
+    
+    var sectionAr = ["day 1", "day 2", "day 3"]
+    var category = [["กลางวัน", "เย็น"],
+                    ["เช้า", "กลางวัน", "เย็น"],
+                    ["เช้า", "กลางวัน"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setNavigationBar(title: "รายการอาหาร")
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SectionUITableviewViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return sectionAr[section]
     }
-    */
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return sectionAr.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return category[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionUITableviewCell", for: indexPath)
+        cell.selectionStyle = .none
+        
+        cell.textLabel?.text = category[indexPath.section][indexPath.row]
+       
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 60.0
+    }
 }

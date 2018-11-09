@@ -8,5 +8,12 @@ target 'HowToMakeTableview' do
   # Pods for HowToMakeTableview
 
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+pod 'iCarousel'
+pod 'Localize-Swift', '~> 2.0'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
+pod 'UIFontComplete'
+pod 'DKImagePickerController', :subspecs => ['PhotoGallery', 'Camera', 'InlineCamera']
+pod "Agrume"
 
 end

@@ -9,6 +9,13 @@
 import UIKit
 
 class TableviewCardLayoutCell: UITableViewCell {
+    
+    @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var heightLabel: NSLayoutConstraint!
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

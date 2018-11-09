@@ -45,12 +45,6 @@ extension CollectionviewInsideTableviewViewController: UITableViewDataSource, UI
         return 200
     }
     
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        
-//        return 200
-//    }
-    
-    
 }
 
 extension CollectionviewInsideTableviewViewController: UICollectionViewDataSource, UICollectionViewDelegate {

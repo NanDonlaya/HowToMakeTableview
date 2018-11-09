@@ -1,8 +1,83 @@
 PODS:
+  - Agrume (5.1.0):
+    - SwiftyGif
+  - DKCamera (1.6.2)
+  - DKImagePickerController/Camera (4.0.2):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/Core (4.0.2):
+    - DKImagePickerController/ImageDataManager
+    - DKImagePickerController/Resource
+  - DKImagePickerController/ImageDataManager (4.0.2)
+  - DKImagePickerController/InlineCamera (4.0.2):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/PhotoGallery (4.0.2):
+    - DKImagePickerController/Core
+    - DKPhotoGallery
+  - DKImagePickerController/Resource (4.0.2)
+  - DKPhotoGallery (0.0.9):
+    - DKPhotoGallery/Core (= 0.0.9)
+    - DKPhotoGallery/Model (= 0.0.9)
+    - DKPhotoGallery/Preview (= 0.0.9)
+    - DKPhotoGallery/Resource (= 0.0.9)
+    - SDWebImage/GIF
+  - DKPhotoGallery/Core (0.0.9):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Preview
+    - SDWebImage/GIF
+  - DKPhotoGallery/Model (0.0.9):
+    - SDWebImage/GIF
+  - DKPhotoGallery/Preview (0.0.9):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Resource
+    - SDWebImage/GIF
+  - DKPhotoGallery/Resource (0.0.9):
+    - SDWebImage/GIF
+  - FLAnimatedImage (1.0.12)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - iCarousel (1.8.3)
+  - Localize-Swift (2.0.0)
+  - SDWebImage/Core (4.4.2)
+  - SDWebImage/GIF (4.4.2):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - Spring (1.0.5)
+  - SwiftyGif (4.1.0)
+  - UIFontComplete (3.0.0)
 
 DEPENDENCIES:
+  - Agrume
+  - DKImagePickerController/Camera
+  - DKImagePickerController/InlineCamera
+  - DKImagePickerController/PhotoGallery
+  - GoogleMaps
+  - GooglePlaces
+  - iCarousel
+  - Localize-Swift (~> 2.0)
   - Spring (from `https://github.com/MengTo/Spring.git`)
+  - UIFontComplete
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Agrume
+    - DKCamera
+    - DKImagePickerController
+    - DKPhotoGallery
+    - FLAnimatedImage
+    - GoogleMaps
+    - GooglePlaces
+    - iCarousel
+    - Localize-Swift
+    - SDWebImage
+    - SwiftyGif
+    - UIFontComplete
 
 EXTERNAL SOURCES:
   Spring:
@@ -14,8 +89,20 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  Agrume: 97f80b07ddfb2e86fd678e2acd6d71022e045849
+  DKCamera: c25552afb4bc3ef4c7966b16a44352d36475fe5d
+  DKImagePickerController: 7011c269ebabacdd640e4269ff3c05597e568899
+  DKPhotoGallery: d6604a611cd47a6d62d6e4df46e53ab9de493492
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
+  SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
+  UIFontComplete: 5b0f59a83308816c610164b79a2540b3520f9b72
 
-PODFILE CHECKSUM: 52429663cc8932f5e6643099b58cb82671e9ba25
+PODFILE CHECKSUM: b4f5c19d261eb9d2f84e1c8ba62694be29221865
 
 COCOAPODS: 1.5.3

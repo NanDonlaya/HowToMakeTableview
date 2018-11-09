@@ -10,6 +10,10 @@ import UIKit
 
 class TableviewSectionAndEnumCell: UITableViewCell {
 
+    @IBOutlet weak var titleLb: UILabel!
+    @IBOutlet weak var castLb: UILabel!
+    @IBOutlet weak var castConHeigth: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

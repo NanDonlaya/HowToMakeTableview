@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYO-N0-ADZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -100,20 +100,39 @@
             </objects>
             <point key="canvasLocation" x="173.59999999999999" y="125.4872563718141"/>
         </scene>
-        <!--Collection EnumI Table View Controller-->
-        <scene sceneID="734-b4-Lnk">
+        <!--Colection In Table View Controller-->
+        <scene sceneID="BYp-tc-80q">
             <objects>
-                <viewController id="eMN-eH-moe" customClass="CollectionEnumITableViewController" customModule="HowToMakeTableview" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iSY-4W-ufO">
+                <viewController id="NYO-N0-ADZ" customClass="ColectionInTableViewController" customModule="HowToMakeTableview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d7O-o5-uue">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-0M-eIE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NYO-N0-ADZ" id="LNp-3f-ay9"/>
+                                    <outlet property="delegate" destination="NYO-N0-ADZ" id="BRL-VN-ppy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="I70-5J-z4i"/>
+                        <constraints>
+                            <constraint firstItem="lbs-aL-bbo" firstAttribute="trailing" secondItem="CZW-0M-eIE" secondAttribute="trailing" id="3yE-0R-fC0"/>
+                            <constraint firstItem="CZW-0M-eIE" firstAttribute="top" secondItem="lbs-aL-bbo" secondAttribute="top" id="RC0-WM-FcX"/>
+                            <constraint firstItem="CZW-0M-eIE" firstAttribute="leading" secondItem="lbs-aL-bbo" secondAttribute="leading" id="cbb-k0-m8F"/>
+                            <constraint firstItem="lbs-aL-bbo" firstAttribute="bottom" secondItem="CZW-0M-eIE" secondAttribute="bottom" id="y6C-eZ-70Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lbs-aL-bbo"/>
                     </view>
+                    <connections>
+                        <outlet property="tableviewConnectView" destination="CZW-0M-eIE" id="1cH-Ag-dBW"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8l8-YK-RGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3k-Ui-h59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="842"/>
+            <point key="canvasLocation" x="166" y="844"/>
         </scene>
     </scenes>
 </document>

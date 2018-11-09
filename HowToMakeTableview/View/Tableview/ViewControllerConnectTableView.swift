@@ -9,22 +9,19 @@
 import UIKit
 
 class ViewControllerConnectTableView: UIViewController {
-
+    
+    
+    @IBOutlet weak var countriesLabel: UILabel!
+    @IBOutlet weak var countriesImage: UIImageView!
+    @IBOutlet weak var countriesDetailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        countriesLabel.text = countries[myIndex]
+        countriesDetailLabel.text = details[myIndex]
+        countriesImage.image = UIImage(named: countries[myIndex] + ".jpg")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
