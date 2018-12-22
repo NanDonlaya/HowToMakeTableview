@@ -24,11 +24,11 @@ class TableviewPracticeViewController: UIViewController {
         
         tableviewConnectView.tableFooterView = UIView()
     }
-
+    
     @IBAction func addTextClicked(_ sender: UIButton) {
         
         addTextToCell()
-        saveData()
+        upDateData()
     }
     
     func addTextToCell() {
@@ -45,11 +45,11 @@ class TableviewPracticeViewController: UIViewController {
         tableviewConnectView.reloadData()
     }
     
-    func saveData() {
+    func upDateData() {
         defaults.set(allCellsText, forKey: "allCellsText")
         defaults.synchronize()
     }
-        
+    
 }
 
 extension TableviewPracticeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -65,6 +65,18 @@ extension TableviewPracticeViewController: UITableViewDataSource, UITableViewDel
         
         let cell = tableviewConnectView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! TableviewPracticeCell
         cell.cellLabel.text = cellsText
+        cell.cellLabel.font = UIFont(name: "Didot", size: 16)
+        
+        //        let nan = indexPath.row % 2
+        switch indexPath.row % 2 {
+        case 0:
+            cell.cellLabel.textColor = UIColor.black
+            break
+        case 1:
+            cell.cellLabel.textColor = UIColor.white
+        default:
+            break
+        }
         
         return cell
     }
@@ -78,11 +90,23 @@ extension TableviewPracticeViewController: UITableViewDataSource, UITableViewDel
         
         if editingStyle == .delete {
             allCellsText.remove(at: indexPath.row)
+            upDateData()
         }
         
         tableviewConnectView.beginUpdates()
         tableviewConnectView.deleteRows(at: [indexPath], with: .automatic)
         tableviewConnectView.endUpdates()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if(indexPath.row % 2 == 0) { //mod เลขคณิตมอดุลาร์
+            cell.backgroundColor = UIColor.white
+        } else {
+            cell.backgroundColor = UIColor.gray
+        }
+        
+
     }
     
 }
