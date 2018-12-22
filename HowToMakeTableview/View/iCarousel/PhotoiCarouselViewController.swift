@@ -67,7 +67,5 @@ extension PhotoiCarouselViewController: UICollectionViewDataSource, UICollection
         
         return 10
     }
-    
-
 
 }

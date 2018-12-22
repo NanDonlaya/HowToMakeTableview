@@ -35,7 +35,7 @@ class TabbarAndTableviewViewController: UIViewController, UITableViewDataSource,
         cell.myImage.image = UIImage(named: allData.tabBarData1[indexPath.row]["image"] ?? "ranong")
         cell.firstLabel.text = allData.tabBarData1[indexPath.row]["title"]
         cell.firstLabel.sizeToFit()
-        cell.heightlabel1.constant = cell.secondLabel.frame.height
+        cell.heightlabel1.constant = cell.firstLabel.frame.height
         cell.secondLabel.text = allData.tabBarData1[indexPath.row]["address"]
         cell.secondLabel.sizeToFit()
         cell.heightLabel2.constant = cell.secondLabel.frame.height

@@ -11,6 +11,10 @@ import Localize_Swift
 
 class Data {
     
+    //Category
+    var topics = ["CustomTableview", "HomeTableView", "CategoryTableView", "CategoryDetailView", "CategoryImageView", "PhotoCollectionView"]
+    var content = [["1"], ["2"], ["3"], ["4"], ["5"], ["6"]]
+    
     //HomeTableView
     
     var homepageImage = ["home-dogBreeds", "home-dogHouse", "home-dogFood", "home-dogsport", "home-dogTraning", "home-dogShared"]

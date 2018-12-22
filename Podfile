@@ -14,6 +14,6 @@ pod 'GoogleMaps'
 pod 'GooglePlaces'
 pod 'UIFontComplete'
 pod 'DKImagePickerController', :subspecs => ['PhotoGallery', 'Camera', 'InlineCamera']
-pod "Agrume"
+pod 'Agrume'
 
 end
